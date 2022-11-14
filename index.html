@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/page1.css">
+        <link rel="stylesheet" href="css/scorecard.css">
+    </head>
+    <title>
+       The Undying Frog
+    </title>
+        <body>
+            <!-- first page -->
+          <div id="parent" class="parent">
+              <img class="bg-image" src="image/frog-background.jpg">
+              <input type="button" id="button"  onclick="myFunction()" class="button" value="Play Game">
+                
+             
+              <img class="logo" src="image/logo.png">
+          </div>
+
+          <!-- enter data page  -->
+          <div hidden id="page1">
+            <div class="container">
+                <div class="bg-image">
+                    <img src="image/Cool-Racing-Track.jpg">
+                  <div id="InputData" class="form"><br>
+                     <label id="entertime"><b>Game Duration</b></label>
+                     <input type="number" id="time" class="input" placeholder="enter time in sec"><br>
+                     <hr>
+              <!-- player 1 details    -->
+
+                     <div id="player1details">
+                      <label id="entername1">Player1</label>
+                      <input type="text" id="playername1" class="input" placeholder="enter player name"><br>
+
+                      <label id="enterdistance"> Distance</label>
+                      <input type="number" id="enterdistance1" class="input" placeholder="enter distance"> <br>
+
+                      <label id="enterjumprest">Jumprest</label>
+                      <input type="number" id="enterjumprest1" class="input" placeholder="enter Jumprest "> <br>
+
+                      <label id="rest"> Rest-Time</label>
+                      <input type="number" id="enterresttime1" class="input" placeholder="enter rest time"><br>
+                    </div>
+                     <div id=vertcalline1></div>
+              
+              <!-- player 2 details -->
+                 <div id="palyer2details">
+                    <label id="entername2">Player2 </label>
+                    <input type="text" id="playername2" class="input" placeholder="enter player name"><br>
+
+                    <label id="enterdistance"> Distance </label>
+                    <input type="number" id="enterdistance2" class="input" placeholder="enter distance"> <br>
+
+                    <label id="enterjumprest">Jumprest </label>
+                    <input type="number" id="enterjumprest2" class="input" placeholder="enter Jumprest "> <br>
+
+                    <label id="rest">Rest-Time</label>
+                    <input type="number" id="enterresttime2" class="input" placeholder="enter rest time">
+                  </div>
+                  <div id=vertcalline2></div>
+              <!-- player 3 details -->
+                 <div id="player3details">
+                    <label id="entername3">Player3</label>
+                    <input type="text" id="playername3" class="input" placeholder="enter player name"><br>
+
+                    <label id="enterdistance">Distance</label>
+                    <input type="number" id="enterdistance3" class="input" placeholder="enter distance"><br>
+                    <label id="enterjumprest">Jumprest</label>
+                    <input type="number" id="enterjumprest3" class="input" placeholder="enter Jumprest "> <br>
+
+                    <label id="rest">Rest-Time</label>
+                    <input type="number" id="enterresttime3" class="input" placeholder="enter rest time">
+               </div>
+               <hr>
+                     <button onclick="StartGame()">Start Game</button>
+                     
+                  </div>
+                </div>
+            </div>
+
+          </div>
+
+
+          <!-- Race track page -->
+          <div hidden id="startgame">
+               <div class="bg-image">
+                  <img src="image/Cool-Racing-Track.jpg">
+               </div>
+                <div class="race_track">
+                      <canvas id="myCanvas" width="1300" height="300" style="border:1px solid #000000;"></canvas>
+                </div>
+                    <div id ="jim" hidden><img src="image/frog-1-removebg-preview.png"></div>
+                    <div id ="jack" hidden><img src="image/frog-1-removebg-preview.png"></div>
+                    <div id ="john" hidden><img src="image/frog-1-removebg-preview.png"></div>
+                      
+
+                    <img  id="image1" hidden>                   
+                    <img src="image/frog-3-removebg-preview.png" id="image2" hidden>                   
+                    <img src="image/frog-4-removebg-preview.png" id="image3" hidden>
+
+                    <img id="2ndrow1" hidden ></img>
+                
+                 
+
+                          <div class="show_result">
+                              <p id="result"></p>
+                              <input type="button" id ="Score"  onclick="scorecrad()" class="Scorecard" value="Score Card">
+                          </div>
+                      </div>
+          
+
+          
+
+          <!-- scorecrad page -->
+            <div hidden id="ScoreImage">
+                <div class="bg-image">
+                    <img src="image/f1-game-2020-os (1).jpg">
+                    </div>
+            </div>
+          <div hidden id="Scorecard">
+               <h1 id="header">Score Card</h1>
+               <hr>
+              <table id="scoretable">
+                <tr>
+                    <th style="text-align:center">Position</th>
+                    <th style="text-align:center"> Name</th>
+                    <th style="text-align:center">Distance Covered</th>
+                  </tr>
+                  <tr>
+                    <td id="position" style="text-align:center">1</td>
+                    <td id="1stName" style="text-align:center"></td>
+                    <td id="1stposition" style="text-align:center"> </td>
+                  </tr>
+                  <tr>
+                    <td id="position" style="text-align:center">2</td>
+                    <td id="2ndName" style="text-align:center"></td>
+                    <td id="2ndposition" style="text-align:center"></td>
+                  </tr>
+                  <tr>
+                    <td id="position" style="text-align:center">3</td>
+                    <td id="3rdName" style="text-align:center"></td>
+                    <td id="3rdposition" style="text-align:center"></td>
+                  </tr>
+              </table>
+                    <h5><i>click "RESTART" button to start again</i></h5>
+                    <a href="index.html">
+                        <input type="button" id="Restart" value="Restart">
+                    </a> 
+                    </div>
+          </div>
+          <script src="js/race_track.js"></script>
+          <script src="js/game.js"></script>
+          <script src="js/scorecrad.js"></script>
+          <script src="js/main.js"></script>
+        </body>
+</html>
