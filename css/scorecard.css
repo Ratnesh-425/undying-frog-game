@@ -1,0 +1,79 @@
+#Scorecard{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    margin-left: 300px;
+    margin-right: 80px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: 425px;
+    width: 800px;
+    background-color: lightgray;
+    opacity: 90%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+
+table {
+    margin-left: 10;
+    margin-right: 10;
+    margin-top: 10;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+  }
+
+td, th {
+    border: 1px solid #F0F8FF;
+    text-align: left;
+    padding: 8px;
+  }
+
+  td {
+      margin-left: 80px;
+  }
+
+#scorecardImage{
+    margin-left: 0px;
+    border-style: double;
+    border-radius: 10px;
+    opacity: 50%;
+    width: 100%;
+    height: 60%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px black solid;
+}
+
+h5 {
+    margin-left: 275px;
+}
+
+#header{
+    margin-left: 300px;
+}
+
+#scoretable{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 45px;
+    width: 85%;
+    height: 200px;
+}
+
+#Restart{
+    margin-left: 350px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    width: 75px;
+}
+
+#Restart:hover{
+        color: #ffffff;
+        background-color: green;
+
+}
+
+
